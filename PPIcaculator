@@ -3,7 +3,7 @@
 #include <math.h>
 
 int l, w;
-float s,ppi;
+float s ,ppi ;
 
 int main(void)
 {
