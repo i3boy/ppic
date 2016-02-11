@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int l, w;
+float s,ppi;
+
+int main(void)
+{
+	printf("\n屏幕PPI计算工具 v1.0\n");
+	printf("====================\n");
+	compurte();
+	printf("\n结果：");
+  printf("\n这块屏幕的PPI为 %.0f。\n", ppi);
+	getchar();
+	getchar();
+	system("cls");
+	main();
+	return 0;
+}
+
+int compurte(void)
+{
+	printf("\n输入屏幕长度（单位：像素，如1920）：");
+	scanf("%d", &l);
+	printf("输入屏幕宽度（单位：像素，如1080）：");
+	scanf("%d", &w);
+	printf("输入屏幕尺寸（单位：吋，如22）：");
+	scanf("%e", &s);
+	ppi = (float)sqrt(l*l + w*w) / s;
+}
